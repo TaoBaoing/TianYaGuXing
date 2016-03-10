@@ -35,6 +35,7 @@
             this.服务任务管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选择服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查询服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.业务员领取任务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,8 @@
             this.用户管理ToolStripMenuItem,
             this.服务任务管理ToolStripMenuItem,
             this.选择服务ToolStripMenuItem,
-            this.查询服务ToolStripMenuItem});
+            this.查询服务ToolStripMenuItem,
+            this.业务员领取任务ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(757, 25);
@@ -84,8 +86,8 @@
             // 选择服务ToolStripMenuItem
             // 
             this.选择服务ToolStripMenuItem.Name = "选择服务ToolStripMenuItem";
-            this.选择服务ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.选择服务ToolStripMenuItem.Text = "选择服务";
+            this.选择服务ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.选择服务ToolStripMenuItem.Text = "业主选择服务";
             this.选择服务ToolStripMenuItem.Click += new System.EventHandler(this.选择服务ToolStripMenuItem_Click);
             // 
             // 查询服务ToolStripMenuItem
@@ -94,6 +96,13 @@
             this.查询服务ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.查询服务ToolStripMenuItem.Text = "查询服务";
             this.查询服务ToolStripMenuItem.Click += new System.EventHandler(this.查询服务ToolStripMenuItem_Click);
+            // 
+            // 业务员领取任务ToolStripMenuItem
+            // 
+            this.业务员领取任务ToolStripMenuItem.Name = "业务员领取任务ToolStripMenuItem";
+            this.业务员领取任务ToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
+            this.业务员领取任务ToolStripMenuItem.Text = "业务员领取任务";
+            this.业务员领取任务ToolStripMenuItem.Click += new System.EventHandler(this.业务员领取任务ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -122,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem 服务任务管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选择服务ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查询服务ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 业务员领取任务ToolStripMenuItem;
     }
 }

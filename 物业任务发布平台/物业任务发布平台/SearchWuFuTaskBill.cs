@@ -31,17 +31,22 @@ namespace 物业任务发布平台
 
             if (Util.User.UserType == UserType.业主)
             {
-                sql += " and bill.YeZhuId='"+Util.User.Id+"'";
+                sql += " and bill.YeZhuId='" + Util.User.Id + "'";
             }
-            else if (Util.User.UserType == UserType.物业员工)
+            else
             {
-                sql += " and bill.YeWuYuanId='" + Util.User.Id + "'";
-                //
-                if (!string.IsNullOrEmpty(comboBox2.Text) )
+                if (Util.User.UserType == UserType.物业员工)
                 {
-                    sql += " and bill.YeZhuId='" + comboBox1.Text + "'";
+                    sql += " and bill.YeWuYuanId='" + Util.User.Id + "'";
+                    //
+                }
+
+                if (!string.IsNullOrEmpty(comboBox2.Text))
+                {
+                    sql += " and yz.UserName='" + comboBox2.Text + "'";
                 }
             }
+           
 
             if (!string.IsNullOrEmpty(comboBox1.Text) && comboBox1.Text != "全部")
             {
@@ -57,6 +62,14 @@ namespace 物业任务发布平台
             {
                 label2.Visible = false;
                 comboBox2.Visible = false;
+            }
+
+            var list = new HHDapperSql().Query<MUser>("select * from MUser order by UserName ");
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add("");
+            foreach (MUser user in list)
+            {
+                comboBox2.Items.Add(user.UserName);
             }
         }
     }

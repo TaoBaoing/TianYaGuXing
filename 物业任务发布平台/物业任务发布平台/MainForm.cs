@@ -54,5 +54,11 @@ namespace 物业任务发布平台
             var f = new SearchWuFuTaskBill();
             f.Show();
         }
+
+        private void 业务员领取任务ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new TakeFuWuTaskBill();
+            f.Show();
+        }
     }
 }
