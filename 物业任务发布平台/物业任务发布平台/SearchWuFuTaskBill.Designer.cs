@@ -99,6 +99,7 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(838, 419);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // 序号
             // 
@@ -165,7 +166,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 0;
-            this.label2.Text = "业主";
+            this.label2.Text = "用户";
             // 
             // comboBox2
             // 

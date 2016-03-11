@@ -72,5 +72,16 @@ namespace 物业任务发布平台
                 comboBox2.Items.Add(user.UserName);
             }
         }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var id = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            var f=new TaskBillEdit();
+            f.Init(Convert.ToInt64(id));
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                BindData();
+            }
+        }
     }
 }

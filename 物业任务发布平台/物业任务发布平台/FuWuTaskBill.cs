@@ -35,9 +35,9 @@ namespace 物业任务发布平台
 
     public class BillState
     {
-        public static string 未开始 { get; set; }
-        public static string 进行中 { get; set; }
-        public static string 完成 { get; set; }
+        public static string 未开始 = "未开始";
+        public static string 进行中 = "进行中";
+        public static string 完成 = "完成";
     }
 
 }

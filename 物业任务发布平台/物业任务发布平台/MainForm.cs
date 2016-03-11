@@ -60,5 +60,71 @@ namespace 物业任务发布平台
             var f = new TakeFuWuTaskBill();
             f.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var f = new SelectFuWuTask();
+            f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var f = new UserList();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var f = new FuWuTaskList();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var f = new SearchWuFuTaskBill();
+            f.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var f = new TakeFuWuTaskBill();
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (Util.User.UserType == UserType.物业员工)
+            {
+                button3.Enabled = true;
+                button5.Enabled = true;
+            }
+            else if (Util.User.UserType == UserType.业主)
+            {
+                button3.Enabled = true;
+                button4.Enabled = true;
+            }
+            else  if (Util.User.UserType == UserType.物业管理)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
+                button5.Enabled = true;
+            }
+            else if (Util.User.UserType == UserType.管理员)
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
+                button5.Enabled = true;
+            }
+
+
+        }
     }
 }

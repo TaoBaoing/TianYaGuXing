@@ -31,7 +31,7 @@ namespace 物业任务发布平台
                 return;
             }
             var sql =
-              "select bill.Id,task.TName,task.TContent,bill.YeZhuDateTime,ywy.UserName as 'YeWuYuanName',yz.UserName as 'YuZhuName', bill.YeWuYuanJieShouDateTime,bill.YeWuYuanWanChengDateTime,bill.BillState from FuWuTaskBill bill left join FuWuTask task on bill.FuWuTaskId=task.Id left join MUser ywy on bill.YeWuYuanId=ywy.Id left join MUser yz on bill.YeZhuId=yz.Id where .BillState='"+BillState.未开始+"'";
+              "select bill.Id,task.TName,task.TContent,bill.YeZhuDateTime,ywy.UserName as 'YeWuYuanName',yz.UserName as 'YuZhuName', bill.YeWuYuanJieShouDateTime,bill.YeWuYuanWanChengDateTime,bill.BillState from FuWuTaskBill bill left join FuWuTask task on bill.FuWuTaskId=task.Id left join MUser ywy on bill.YeWuYuanId=ywy.Id left join MUser yz on bill.YeZhuId=yz.Id where bill.BillState='" + BillState.未开始+"'";
 
             dataGridView1.DataSource = new HHDapperSql().ExecuteDataSet(sql).Tables[0].DefaultView;
         }
@@ -44,7 +44,7 @@ namespace 物业任务发布平台
                 if (MessageBox.Show("确定要接受此任务吗？","确认",MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     var sql = "update FuWuTaskBill set YeWuYuanId='" + Util.User.Id + "',YeWuYuanJieShouDateTime='" +
-                              DateTime.Now + ",BillState='"+BillState.进行中+"'' where Id='" + id + "'";
+                              DateTime.Now + "',BillState='"+BillState.进行中+"' where Id='" + id + "'";
 
                     new HHDapperSql().ExecuteNonQuery(sql);
                     BingData();
