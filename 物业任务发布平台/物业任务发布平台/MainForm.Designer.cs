@@ -72,7 +72,7 @@
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -181,9 +181,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(94, 336);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 12);
+            this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "本程序由*****开发完成";
+            this.label1.Text = "本程序由 殇 开发完成";
             // 
             // MainForm
             // 
