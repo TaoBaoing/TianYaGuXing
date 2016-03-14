@@ -44,13 +44,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtFinishDateTime = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblPingJia = new System.Windows.Forms.Label();
+            this.txtPingJia = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(104, 56);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(365, 147);
+            this.richTextBox1.Size = new System.Drawing.Size(365, 128);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "";
             // 
@@ -75,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 222);
+            this.label3.Location = new System.Drawing.Point(69, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 7;
@@ -83,22 +85,22 @@
             // 
             // txtYeZhuName
             // 
-            this.txtYeZhuName.Location = new System.Drawing.Point(104, 219);
+            this.txtYeZhuName.Location = new System.Drawing.Point(104, 199);
             this.txtYeZhuName.Name = "txtYeZhuName";
-            this.txtYeZhuName.Size = new System.Drawing.Size(365, 21);
+            this.txtYeZhuName.Size = new System.Drawing.Size(141, 21);
             this.txtYeZhuName.TabIndex = 8;
             // 
             // txtCreateTime
             // 
-            this.txtCreateTime.Location = new System.Drawing.Point(104, 258);
+            this.txtCreateTime.Location = new System.Drawing.Point(328, 199);
             this.txtCreateTime.Name = "txtCreateTime";
-            this.txtCreateTime.Size = new System.Drawing.Size(365, 21);
+            this.txtCreateTime.Size = new System.Drawing.Size(141, 21);
             this.txtCreateTime.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 261);
+            this.label4.Location = new System.Drawing.Point(269, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 9;
@@ -106,7 +108,7 @@
             // 
             // txtBillState
             // 
-            this.txtBillState.Location = new System.Drawing.Point(104, 300);
+            this.txtBillState.Location = new System.Drawing.Point(104, 237);
             this.txtBillState.Name = "txtBillState";
             this.txtBillState.Size = new System.Drawing.Size(365, 21);
             this.txtBillState.TabIndex = 12;
@@ -114,7 +116,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 303);
+            this.label5.Location = new System.Drawing.Point(69, 240);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 11;
@@ -122,7 +124,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(147, 419);
+            this.button1.Location = new System.Drawing.Point(147, 402);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 36);
             this.button1.TabIndex = 13;
@@ -140,7 +142,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 340);
+            this.label6.Location = new System.Drawing.Point(57, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 11;
@@ -148,15 +150,15 @@
             // 
             // txtYeWuYuanName
             // 
-            this.txtYeWuYuanName.Location = new System.Drawing.Point(104, 337);
+            this.txtYeWuYuanName.Location = new System.Drawing.Point(104, 281);
             this.txtYeWuYuanName.Name = "txtYeWuYuanName";
-            this.txtYeWuYuanName.Size = new System.Drawing.Size(365, 21);
+            this.txtYeWuYuanName.Size = new System.Drawing.Size(141, 21);
             this.txtYeWuYuanName.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(45, 380);
+            this.label7.Location = new System.Drawing.Point(269, 284);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 11;
@@ -164,14 +166,14 @@
             // 
             // txtFinishDateTime
             // 
-            this.txtFinishDateTime.Location = new System.Drawing.Point(104, 377);
+            this.txtFinishDateTime.Location = new System.Drawing.Point(328, 281);
             this.txtFinishDateTime.Name = "txtFinishDateTime";
-            this.txtFinishDateTime.Size = new System.Drawing.Size(365, 21);
+            this.txtFinishDateTime.Size = new System.Drawing.Size(141, 21);
             this.txtFinishDateTime.TabIndex = 12;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(294, 419);
+            this.button2.Location = new System.Drawing.Point(294, 402);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 36);
             this.button2.TabIndex = 15;
@@ -179,11 +181,28 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lblPingJia
+            // 
+            this.lblPingJia.AutoSize = true;
+            this.lblPingJia.Location = new System.Drawing.Point(45, 326);
+            this.lblPingJia.Name = "lblPingJia";
+            this.lblPingJia.Size = new System.Drawing.Size(53, 12);
+            this.lblPingJia.TabIndex = 11;
+            this.lblPingJia.Text = "业主评价";
+            // 
+            // txtPingJia
+            // 
+            this.txtPingJia.Location = new System.Drawing.Point(104, 323);
+            this.txtPingJia.Name = "txtPingJia";
+            this.txtPingJia.Size = new System.Drawing.Size(365, 63);
+            this.txtPingJia.TabIndex = 6;
+            this.txtPingJia.Text = "";
+            // 
             // TaskBillEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 484);
+            this.ClientSize = new System.Drawing.Size(529, 460);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtTName);
             this.Controls.Add(this.button1);
@@ -192,11 +211,13 @@
             this.Controls.Add(this.txtYeWuYuanName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBillState);
+            this.Controls.Add(this.lblPingJia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCreateTime);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtYeZhuName);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPingJia);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -229,5 +250,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtFinishDateTime;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblPingJia;
+        private System.Windows.Forms.RichTextBox txtPingJia;
     }
 }

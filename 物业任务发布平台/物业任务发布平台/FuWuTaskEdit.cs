@@ -29,7 +29,7 @@ namespace 物业任务发布平台
         {
             mFuWuTask.TName = txtName.Text.Trim();
             mFuWuTask.TContent = txtContent.Text.Trim();
-
+            mFuWuTask.Price = txtPrice.Text.Trim();
             if (mId > 0)
             {
                 new HHDapperSql().Update(mFuWuTask);
@@ -59,6 +59,7 @@ namespace 物业任务发布平台
         {
             txtName.Text = mFuWuTask.TName;
             txtContent.Text = mFuWuTask.TContent;
+            txtPrice.Text = mFuWuTask.Price;
         }
     }
 }

@@ -38,7 +38,7 @@ namespace 物业任务发布平台
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 5&&dataGridView1.Rows.Count>0)
             {
                 var id = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                 if (MessageBox.Show("确定要接受此任务吗？","确认",MessageBoxButtons.OKCancel) == DialogResult.OK)

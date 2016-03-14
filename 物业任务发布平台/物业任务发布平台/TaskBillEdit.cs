@@ -14,10 +14,11 @@ namespace 物业任务发布平台
     public partial class TaskBillEdit : Form
     {
         private long mId;
-
-        public void Init(long id)
+        private bool IsPingJia;
+        public void Init(long id,bool pingjia=false)
         {
             mId = id;
+            IsPingJia = pingjia;
         }
 
         public TaskBillEdit()
@@ -28,8 +29,9 @@ namespace 物业任务发布平台
       
         private void TaskBillEdit_Load(object sender, EventArgs e)
         {
+           
             string sql =
-                "select bill.Id,task.TName,task.TContent,bill.YeZhuDateTime,ywy.UserName as 'YeWuYuanName',yz.UserName as 'YuZhuName', bill.YeWuYuanJieShouDateTime,bill.YeWuYuanWanChengDateTime,bill.BillState from FuWuTaskBill bill left join FuWuTask task on bill.FuWuTaskId=task.Id left join MUser ywy on bill.YeWuYuanId=ywy.Id left join MUser yz on bill.YeZhuId=yz.Id where bill.Id='" +
+                "select bill.PingJia,bill.Id,task.TName,task.TContent,bill.YeZhuDateTime,ywy.UserName as 'YeWuYuanName',yz.UserName as 'YuZhuName', bill.YeWuYuanJieShouDateTime,bill.YeWuYuanWanChengDateTime,bill.BillState from FuWuTaskBill bill left join FuWuTask task on bill.FuWuTaskId=task.Id left join MUser ywy on bill.YeWuYuanId=ywy.Id left join MUser yz on bill.YeZhuId=yz.Id where bill.Id='" +
                 mId + "' ";
           var dt= new HHDapperSql().ExecuteDataSet(sql).Tables[0];
             if (dt.Rows.Count < 1)
@@ -54,6 +56,18 @@ namespace 物业任务发布平台
             txtBillState.Text= objtostring(row["BillState"]);
             txtYeWuYuanName.Text = objtostring(row["YeWuYuanName"]);
             txtFinishDateTime.Text = objtostring(row["YeWuYuanWanChengDateTime"]);
+            txtPingJia.Text = objtostring(row["PingJia"]);
+
+            if (IsPingJia)
+            {
+                button1.Text = "确 定 评 价";
+                button1.Visible = true;
+            }
+            else
+            {
+                lblPingJia.Visible = false;
+                txtPingJia.Visible = false;
+            }
         }
 
         private string objtostring(object obj)
@@ -67,14 +81,26 @@ namespace 物业任务发布平台
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("确定完成？", "确定", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (!IsPingJia)
             {
-                var sql = "update FuWuTaskBill set YeWuYuanWanChengDateTime='"+DateTime.Now+"',BillState='" + BillState.完成 + "' where Id='" + mId + "'";
-                new HHDapperSql().ExecuteNonQuery(sql);
-                DialogResult=DialogResult.OK;
-                Close();
+                if (MessageBox.Show("确定完成？", "确定", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    var sql = "update FuWuTaskBill set YeWuYuanWanChengDateTime='" + DateTime.Now + "',BillState='" + BillState.完成 + "' where Id='" + mId + "'";
+                    new HHDapperSql().ExecuteNonQuery(sql);
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
             }
-          
+            else
+            {
+                if (MessageBox.Show("确定完成评价？", "确定", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    var sql = "update FuWuTaskBill set PingJia='" + txtPingJia.Text + "' where Id='" + mId + "'";
+                    new HHDapperSql().ExecuteNonQuery(sql);
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -13,5 +13,7 @@ namespace 物业任务发布平台
 
        public string TContent { get; set; }
 
+       public string Price { get; set; }
+
     }
 }

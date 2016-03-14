@@ -36,6 +36,7 @@
             this.选择服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查询服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.业务员领取任务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.业主评价服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +56,8 @@
             this.服务任务管理ToolStripMenuItem,
             this.选择服务ToolStripMenuItem,
             this.查询服务ToolStripMenuItem,
-            this.业务员领取任务ToolStripMenuItem});
+            this.业务员领取任务ToolStripMenuItem,
+            this.业主评价服务ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(622, 25);
@@ -72,12 +75,13 @@
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 用户管理ToolStripMenuItem
             // 
+            this.用户管理ToolStripMenuItem.Enabled = false;
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
             this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
@@ -85,6 +89,7 @@
             // 
             // 服务任务管理ToolStripMenuItem
             // 
+            this.服务任务管理ToolStripMenuItem.Enabled = false;
             this.服务任务管理ToolStripMenuItem.Name = "服务任务管理ToolStripMenuItem";
             this.服务任务管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
             this.服务任务管理ToolStripMenuItem.Text = "服务任务管理";
@@ -92,6 +97,7 @@
             // 
             // 选择服务ToolStripMenuItem
             // 
+            this.选择服务ToolStripMenuItem.Enabled = false;
             this.选择服务ToolStripMenuItem.Name = "选择服务ToolStripMenuItem";
             this.选择服务ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
             this.选择服务ToolStripMenuItem.Text = "业主选择服务";
@@ -106,10 +112,19 @@
             // 
             // 业务员领取任务ToolStripMenuItem
             // 
+            this.业务员领取任务ToolStripMenuItem.Enabled = false;
             this.业务员领取任务ToolStripMenuItem.Name = "业务员领取任务ToolStripMenuItem";
             this.业务员领取任务ToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.业务员领取任务ToolStripMenuItem.Text = "业务员领取任务";
             this.业务员领取任务ToolStripMenuItem.Click += new System.EventHandler(this.业务员领取任务ToolStripMenuItem_Click);
+            // 
+            // 业主评价服务ToolStripMenuItem
+            // 
+            this.业主评价服务ToolStripMenuItem.Enabled = false;
+            this.业主评价服务ToolStripMenuItem.Name = "业主评价服务ToolStripMenuItem";
+            this.业主评价服务ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.业主评价服务ToolStripMenuItem.Text = "业主评价服务";
+            this.业主评价服务ToolStripMenuItem.Click += new System.EventHandler(this.业主评价服务ToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -168,22 +183,33 @@
             // 
             // button6
             // 
+            this.button6.Enabled = false;
             this.button6.Location = new System.Drawing.Point(342, 230);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(164, 42);
             this.button6.TabIndex = 1;
-            this.button6.Text = "退        出";
+            this.button6.Text = "业 主 评 价 服 务";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 336);
+            this.label1.Location = new System.Drawing.Point(340, 331);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 2;
             this.label1.Text = "本程序由 殇 开发完成";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(94, 316);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(164, 42);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "退        出";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // MainForm
             // 
@@ -192,6 +218,7 @@
             this.ClientSize = new System.Drawing.Size(622, 396);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -201,7 +228,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "物业任务平台";
+            this.Text = "物业管理增值服务系统";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -228,5 +255,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ToolStripMenuItem 业主评价服务ToolStripMenuItem;
     }
 }

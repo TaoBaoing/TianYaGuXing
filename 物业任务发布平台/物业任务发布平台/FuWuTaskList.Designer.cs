@@ -36,6 +36,7 @@
             this.删除选中ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.序号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.服务名称 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.价格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.服务内容 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +68,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.序号,
             this.服务名称,
+            this.价格,
             this.服务内容});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,13 +111,20 @@
             this.服务名称.Name = "服务名称";
             this.服务名称.ReadOnly = true;
             // 
+            // 价格
+            // 
+            this.价格.DataPropertyName = "Price";
+            this.价格.HeaderText = "价格";
+            this.价格.Name = "价格";
+            this.价格.ReadOnly = true;
+            // 
             // 服务内容
             // 
             this.服务内容.DataPropertyName = "TContent";
             this.服务内容.HeaderText = "服务内容";
             this.服务内容.Name = "服务内容";
             this.服务内容.ReadOnly = true;
-            this.服务内容.Width = 500;
+            this.服务内容.Width = 400;
             // 
             // FuWuTaskList
             // 
@@ -148,6 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem 删除选中ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn 序号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 服务名称;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 价格;
         private System.Windows.Forms.DataGridViewTextBoxColumn 服务内容;
     }
 }

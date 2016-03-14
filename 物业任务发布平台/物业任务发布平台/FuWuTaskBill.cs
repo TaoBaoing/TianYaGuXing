@@ -27,9 +27,13 @@ namespace 物业任务发布平台
         //业务员完成 任务时间
         public DateTime? YeWuYuanWanChengDateTime { get; set; }
 
+//        public DateTime? PingJiaDateTime { get; set; }
+
         //当前单据状态
         public string BillState { get; set; }
 
+
+        public string PingJia { get; set; }
 
     }
 

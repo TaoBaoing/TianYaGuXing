@@ -93,7 +93,9 @@ namespace 物业任务发布平台
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Exit();
+            var f = new SearchWuFuTaskBill();
+            f.Init(true);
+            f.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -102,11 +104,15 @@ namespace 物业任务发布平台
             {
                 button3.Enabled = true;
                 button5.Enabled = true;
+                业务员领取任务ToolStripMenuItem.Enabled = true;
             }
             else if (Util.User.UserType == UserType.业主)
             {
                 button3.Enabled = true;
                 button4.Enabled = true;
+                button6.Enabled = true;
+                选择服务ToolStripMenuItem.Enabled = true;
+                业主评价服务ToolStripMenuItem.Enabled = true;
             }
             else  if (Util.User.UserType == UserType.物业管理)
             {
@@ -114,6 +120,10 @@ namespace 物业任务发布平台
                 button3.Enabled = true;
                 button4.Enabled = true;
                 button5.Enabled = true;
+                业务员领取任务ToolStripMenuItem.Enabled = true;
+                服务任务管理ToolStripMenuItem.Enabled = true;
+                选择服务ToolStripMenuItem.Enabled = true;
+                业主评价服务ToolStripMenuItem.Enabled = true;
             }
             else if (Util.User.UserType == UserType.管理员)
             {
@@ -122,9 +132,28 @@ namespace 物业任务发布平台
                 button3.Enabled = true;
                 button4.Enabled = true;
                 button5.Enabled = true;
+                button6.Enabled = true;
+                业务员领取任务ToolStripMenuItem.Enabled = true;
+                服务任务管理ToolStripMenuItem.Enabled = true;
+                选择服务ToolStripMenuItem.Enabled = true;
+                业主评价服务ToolStripMenuItem.Enabled = true;
             }
 
 
+        }
+
+  
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
+
+        private void 业主评价服务ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new SearchWuFuTaskBill();
+            f.Init(true);
+            f.Show();
         }
     }
 }

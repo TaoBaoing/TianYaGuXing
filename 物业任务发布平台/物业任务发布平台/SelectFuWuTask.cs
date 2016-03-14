@@ -62,6 +62,7 @@ namespace 物业任务发布平台
             {
                 mFuWuTask = f;
                 richTextBox1.Text = f.TContent;
+                lblPrice.Text = f.Price;
             }
         }
     }

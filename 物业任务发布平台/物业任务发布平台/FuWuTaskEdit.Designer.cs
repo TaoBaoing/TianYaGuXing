@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 73);
+            this.label2.Location = new System.Drawing.Point(27, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
@@ -62,9 +64,9 @@
             // 
             // txtContent
             // 
-            this.txtContent.Location = new System.Drawing.Point(86, 73);
+            this.txtContent.Location = new System.Drawing.Point(86, 112);
             this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(313, 228);
+            this.txtContent.Size = new System.Drawing.Size(313, 190);
             this.txtContent.TabIndex = 3;
             this.txtContent.Text = "";
             // 
@@ -78,6 +80,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "服务价格";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(86, 62);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(313, 21);
+            this.txtPrice.TabIndex = 1;
+            // 
             // FuWuTaskEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -86,6 +104,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -105,5 +125,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox txtContent;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPrice;
     }
 }
