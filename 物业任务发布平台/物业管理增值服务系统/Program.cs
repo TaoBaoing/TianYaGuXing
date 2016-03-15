@@ -15,16 +15,7 @@ namespace 物业任务发布平台
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (DateTime.Now > new DateTime(2016, 3, 15))
-            {
-                MessageBox.Show("过期");
-                return;
-            }
-            else
-            {
-                Application.Run(new Form1());
-            }
-           
+            Application.Run(new Form1());
         }
     }
 }
