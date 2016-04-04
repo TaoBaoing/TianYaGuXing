@@ -116,6 +116,12 @@
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
+    <Compile Include="YuanGongLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuanGongLogin.Designer.cs">
+      <DependentUpon>YuanGongLogin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuanGongLogin.resx">
+      <DependentUpon>YuanGongLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

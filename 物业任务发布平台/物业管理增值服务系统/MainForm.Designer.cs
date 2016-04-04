@@ -31,12 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.服务任务管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.选择服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查询服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.业务员领取任务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.业主评价服务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -52,12 +48,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.系统ToolStripMenuItem,
-            this.用户管理ToolStripMenuItem,
-            this.服务任务管理ToolStripMenuItem,
-            this.选择服务ToolStripMenuItem,
             this.查询服务ToolStripMenuItem,
-            this.业务员领取任务ToolStripMenuItem,
-            this.业主评价服务ToolStripMenuItem});
+            this.业务员领取任务ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(622, 25);
@@ -79,30 +71,6 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // 用户管理ToolStripMenuItem
-            // 
-            this.用户管理ToolStripMenuItem.Enabled = false;
-            this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.用户管理ToolStripMenuItem.Text = "用户管理";
-            this.用户管理ToolStripMenuItem.Click += new System.EventHandler(this.用户管理ToolStripMenuItem_Click);
-            // 
-            // 服务任务管理ToolStripMenuItem
-            // 
-            this.服务任务管理ToolStripMenuItem.Enabled = false;
-            this.服务任务管理ToolStripMenuItem.Name = "服务任务管理ToolStripMenuItem";
-            this.服务任务管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.服务任务管理ToolStripMenuItem.Text = "服务任务管理";
-            this.服务任务管理ToolStripMenuItem.Click += new System.EventHandler(this.服务任务管理ToolStripMenuItem_Click);
-            // 
-            // 选择服务ToolStripMenuItem
-            // 
-            this.选择服务ToolStripMenuItem.Enabled = false;
-            this.选择服务ToolStripMenuItem.Name = "选择服务ToolStripMenuItem";
-            this.选择服务ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.选择服务ToolStripMenuItem.Text = "业主选择服务";
-            this.选择服务ToolStripMenuItem.Click += new System.EventHandler(this.选择服务ToolStripMenuItem_Click);
-            // 
             // 查询服务ToolStripMenuItem
             // 
             this.查询服务ToolStripMenuItem.Name = "查询服务ToolStripMenuItem";
@@ -112,19 +80,10 @@
             // 
             // 业务员领取任务ToolStripMenuItem
             // 
-            this.业务员领取任务ToolStripMenuItem.Enabled = false;
             this.业务员领取任务ToolStripMenuItem.Name = "业务员领取任务ToolStripMenuItem";
             this.业务员领取任务ToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
             this.业务员领取任务ToolStripMenuItem.Text = "业务员领取任务";
             this.业务员领取任务ToolStripMenuItem.Click += new System.EventHandler(this.业务员领取任务ToolStripMenuItem_Click);
-            // 
-            // 业主评价服务ToolStripMenuItem
-            // 
-            this.业主评价服务ToolStripMenuItem.Enabled = false;
-            this.业主评价服务ToolStripMenuItem.Name = "业主评价服务ToolStripMenuItem";
-            this.业主评价服务ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.业主评价服务ToolStripMenuItem.Text = "业主评价服务";
-            this.业主评价服务ToolStripMenuItem.Click += new System.EventHandler(this.业主评价服务ToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -243,9 +202,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 系统ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 服务任务管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 选择服务ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查询服务ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 业务员领取任务ToolStripMenuItem;
         private System.Windows.Forms.Button button1;
@@ -256,6 +212,5 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ToolStripMenuItem 业主评价服务ToolStripMenuItem;
     }
 }

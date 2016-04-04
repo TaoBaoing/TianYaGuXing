@@ -16,11 +16,7 @@ namespace 物业任务发布平台
             InitializeComponent();
         }
 
-        private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var f=new UserList();
-            f.Show();
-        }
+    
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -31,7 +27,11 @@ namespace 物业任务发布平台
         {
             Application.Exit();
         }
-
+        private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new UserList();
+            f.Show();
+        }
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Exit();
