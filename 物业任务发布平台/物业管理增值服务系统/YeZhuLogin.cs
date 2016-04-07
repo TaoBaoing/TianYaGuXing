@@ -60,5 +60,10 @@ namespace 物业任务发布平台
             f.Init(true);
             f.Show();
         }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
     }
 }

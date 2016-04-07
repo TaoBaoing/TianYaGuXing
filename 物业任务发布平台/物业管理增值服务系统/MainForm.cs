@@ -133,6 +133,7 @@ namespace 物业任务发布平台
                 button4.Enabled = true;
                 button5.Enabled = true;
                 button6.Enabled = true;
+                用户管理ToolStripMenuItem.Enabled = true;
                 业务员领取任务ToolStripMenuItem.Enabled = true;
                 服务任务管理ToolStripMenuItem.Enabled = true;
                 选择服务ToolStripMenuItem.Enabled = true;
