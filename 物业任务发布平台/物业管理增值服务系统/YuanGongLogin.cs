@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HH.Dapper;
 
 namespace 物业任务发布平台
 {
@@ -15,6 +16,7 @@ namespace 物业任务发布平台
         public YuanGongLogin()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
         private void Exit()
         {
@@ -52,6 +54,25 @@ namespace 物业任务发布平台
         {
             var f = new TakeFuWuTaskBill();
             f.Show();
+        }
+
+        private void YuanGongLogin_Load(object sender, EventArgs e)
+        {
+            BindData();
+        }
+        private void BindData()
+        {
+            var sql =
+                "select bill.PingJia,bill.Id,task.TName,bill.YeZhuDateTime,ywy.UserName as 'YeWuYuanName',yz.UserName as 'YuZhuName', bill.YeWuYuanJieShouDateTime,bill.YeWuYuanWanChengDateTime,bill.BillState from FuWuTaskBill bill left join FuWuTask task on bill.FuWuTaskId=task.Id left join MUser ywy on bill.YeWuYuanId=ywy.Id left join MUser yz on bill.YeZhuId=yz.Id where 1=1 ";
+             
+                sql += " and bill.YeWuYuanId='" + Util.User.Id + "'";
+
+               dataGridView1.DataSource = new HHDapperSql().ExecuteDataSet(sql).Tables[0].DefaultView;
+        }
+
+        private void YuanGongLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Exit();
         }
     }
 }

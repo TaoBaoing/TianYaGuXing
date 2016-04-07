@@ -29,9 +29,32 @@ namespace 物业任务发布平台
                 return;
             }
             Util.User = user;
-            var f=new MainForm();
             this.Hide();
-            f.Show();
+            if (user.UserType == UserType.管理员)
+            {
+                var f = new MainForm();
+                f.Show();
+            }
+            else if (user.UserType == UserType.物业员工)
+            {
+                var f=new YuanGongLogin();
+                f.Show();
+            }
+            else if (user.UserType == UserType.业主)
+            {
+                var f = new YeZhuLogin();
+                f.Show();
+            }
+            else if (user.UserType == UserType.物业管理)
+            {
+                var f = new WuYeLogin();
+                f.Show();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

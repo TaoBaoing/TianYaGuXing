@@ -116,6 +116,18 @@
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
+    <Compile Include="WuYeLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WuYeLogin.Designer.cs">
+      <DependentUpon>WuYeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YeZhuLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeZhuLogin.Designer.cs">
+      <DependentUpon>YeZhuLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="YuanGongLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WuYeLogin.resx">
+      <DependentUpon>WuYeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeZhuLogin.resx">
+      <DependentUpon>YeZhuLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YuanGongLogin.resx">
       <DependentUpon>YuanGongLogin.cs</DependentUpon>
